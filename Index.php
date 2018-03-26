@@ -14,9 +14,10 @@
 		
 		<div class="form-login"><!--contenedor de la caja principal-->
 
-			
+			<!-- formulario con el metodo post para obtener los valores de los TXT -->
 			<form method="POST" action="validar.php">
-			<div class="inputs"><!--Items de la caja-->
+			<div class="inputs">
+				<!--Items de la caja-->
 				<label for="usuario" class="nombre">Usuario</label>
 				<input type="text" name="usuario" placeholder="Ingrese Usuario" required/>
 				<label for="pass" class="pass">Contraseña</label>
