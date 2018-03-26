@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	min-height: : 100vh;
+	font-family: sans-serif;
+	align-content: center;
+
+}
+
+/*Color de las palabras en la navbar*/
+h1,a {
+	color: #34495e;
+}
+
+/*saca las decoraciones de los <a>*/
+a {
+	text-decoration: none;
+}
+
+
+/*valores para posisionar el nombre de usuario el la navbar*/
+.user {
+	margin: 0;
+	font-size: 1.5em;
+	padding-left: 20px;
+}
+
+/*valor de la altura de la navbar*/
+.main-nav {
+	margin: 10px;
+  	padding: 0;
+  	list-style: none;
+}
+
+/*centra los objetos (h1,li) de la navbar*/
+.logo a,.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+/*valores de color y tamañano de letra de los elemntos a*/
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+
+/*cambia de color los elementos <a> cuando se le pasa el puntero por encima*/
+.main-nav a:hover {
+	color: #718daa;
+}
+
+/*vlaores de diseño de la caja navbar*/
+
+.header{
+	margin: 3px 5px 3px 5px;
+	padding-top: .10em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	border-radius: 10px;
+	
+}
+
+
+
+/* Query Settings*/
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+ 
+/*==================Form settings=======================*/
+
+
+
+li{
+	list-style: none;
+}
+
+.contenedor{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(200,200,200,.6);
+
+}
+
+.caja{
+	flex: 0 1 50%;
+}
+
+.form{
+	display: flex;
+	justify-content: center;
+	background-color:orange;
+	max-width: 50%;
+	padding:50px 50px 50px 50px;
+	align-items: center;
+
+
+
+}
+.obs{
+	display: flex;
+	justify-content: flex-start;
+	background-color:lightblue;
+	box-sizing: border-box; 
+	border: 10px solid red;
+	
+}
+
+
+.observasiones{
+	display: flex;
+    height:170px;
+    width:70%;
+    resize: none;
+
+    
+}
+
+.boton{
+	margin:50px;
+	padding: 10px;
+	width:20vh;
+	display: flex;
+	justify-content: center;
+
+}
+p{
+	display: flex;
+	padding: 0px 60px 0px 60px;
+	align-items: center;
+}

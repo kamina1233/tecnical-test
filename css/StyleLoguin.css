@@ -1,0 +1,88 @@
+body, html {
+	height: 100%;
+	padding: 0x;
+	margin:0px;
+	min-height: 100vh;
+}
+
+.contenedor{
+	/*Flexbox*/
+	display: flex;
+	flex-direction: row;
+	
+	/*Background Settings*/
+	height: 100%;
+	background: url(../img/fancy.jpg); 
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover; 
+	background-repeat: no-repeat;
+	
+
+}
+
+.form-login{
+	/*centra la caja principal de la caja donde esta todos los elementos*/
+	margin: auto;	
+	height: 300px;
+	width: 500px;
+
+	/*color trasnparente para el form-login*/
+	background-color: rgba(200,200,200,0.6);
+
+	/*borde de la caja donde estan los elementos*/
+	border: 10px solid black;
+	border-radius: 15px;
+}
+
+.inputs{
+
+	padding-top: 80px;
+	/*tamaño de los inputs de user-txt y user-pass */
+	height: 150px;
+	width: 250px;
+
+	/*centra los divs de form-login (labels e imputs)*/
+	margin: auto;
+
+	/*Flexbox Settings*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+
+
+
+
+
+/* Centra el label "usuario" */
+.inputs .nombre{
+	margin: auto;
+}
+
+/* Centra el label "Contraseña" */
+.inputs .pass{
+	margin: auto;
+}
+
+input[type="submit"]{
+	padding: 10px;
+	background: #0098cb;
+	width: 50%;
+	margin: 20px auto;
+	margin-top: 10px;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+
+
+	/*Flexbox Settings*/
+	display: flex;
+	margin: auto;
+	justify-content: center;
+}
+
+input[type="submit"]:hover{
+	background-color: #00b8eb;
+}
