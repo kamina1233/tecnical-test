@@ -9,13 +9,13 @@
 	<script src="js/prefixfree.min.js" type="text/javascript"></script><!--pluguin que agrega los prefijos para navegadores desactualizados-->
 </head>
 
-<body>
+<body>	
 	<div class="contenedor"><!--contenedor principal de la web-->
 		
 		<div class="form-login"><!--contenedor de la caja principal-->
 
 			
-			<form method="POST" action="database.php">
+			<form method="POST" action="validar.php">
 			<div class="inputs"><!--Items de la caja-->
 				<label for="usuario" class="nombre">Usuario</label>
 				<input type="text" name="usuario" placeholder="Ingrese Usuario" required/>
