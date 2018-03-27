@@ -1,19 +1,13 @@
 <?php 
 	session_start();
 	
-	if (isset($_SESSION['id']) && $_SESSION['id'] == true)
-{
+	if (isset($_SESSION['current_id']) && $_SESSION['current_id'] == true){
 
-}
-
-
-else
-{
-echo "<br/>" . "No te Logeaste" . "<br/>";
-echo "<br/>" . "<a href='index.php'>volver al Login</a>";
-
-exit;
-}
+	}else{
+			echo "<br/>" . "No te Logeaste" . "<br/>";
+			echo "<br/>" . "<a href='index.php'>volver al Login</a>";
+			exit;
+		}
 
 
  ?>
@@ -29,7 +23,7 @@ exit;
 
 <body>
 	<div class="header">
-	<h1 class="user"><a href="#">User</a></h1>
+	<h1 class="user"><a href="#">Bienvenido Usuario -(<?php echo $_SESSION['current_user']; ?>)-</a></h1>
       <ul class="main-nav">
           <li><a href="#">Funcion?</a></li>
           
