@@ -1,4 +1,22 @@
+<?php 
+	session_start();
+	
+	if (isset($_SESSION['id']) && $_SESSION['id'] == true)
+{
 
+}
+
+
+else
+{
+echo "<br/>" . "No te Logeaste" . "<br/>";
+echo "<br/>" . "<a href='index.php'>volver al Login</a>";
+
+exit;
+}
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +32,9 @@
 	<h1 class="user"><a href="#">User</a></h1>
       <ul class="main-nav">
           <li><a href="#">Funcion?</a></li>
-          <li><a href="#">Salir</a></li>
+          
+          <li><a href="logout.php">SALIR!!!</a></li>
+          
       </ul>
 	</div> 
 

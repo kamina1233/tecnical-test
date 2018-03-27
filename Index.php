@@ -1,4 +1,6 @@
-
+<?php 
+	include("validar.php");
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +17,7 @@
 		<div class="form-login"><!--contenedor de la caja principal-->
 
 			<!-- formulario con el metodo post para obtener los valores de los TXT -->
-			<form method="POST" action="validar.php">
+			<form method="POST" action="">
 			<div class="inputs">
 				<!--Items de la caja-->
 				<label for="usuario" class="nombre">Usuario</label>
