@@ -8,7 +8,9 @@
 	<title>Login</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
 	<link rel="stylesheet" href="css/StyleLoguin.css">
-	<script src="js/prefixfree.min.js" type="text/javascript"></script><!--pluguin que agrega los prefijos para navegadores desactualizados-->
+	<script src="js/prefixfree.min.js" type="text/javascript"></script><!--pluguin que agrega los prefijos para navegadores 
+	desactualizados-->
+	
 </head>
 
 <body>	
