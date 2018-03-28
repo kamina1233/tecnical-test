@@ -73,7 +73,7 @@
 					</div>
 
 					<!--********* CHECKBOX ************* -->		
-				</script>	
+				
 					<li>
 						<ul>
 							<div class="servicios">
@@ -143,7 +143,7 @@
 
 						</ul>
 					</li>
-				</script>
+				
 				</ul>
 				
 			
