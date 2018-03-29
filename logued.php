@@ -85,22 +85,22 @@
 						<!--******SERVICOS CHKBOX******* -->	
 								<p>Tipo de servicio</p>
 								<li>
-									<input type="checkbox" name="servicio[]" value="Consultoria" checked="">
+									<input type="checkbox" name="servicio[]" value="Consultoria" checked="" />
 									<label for="consultoria">Consultoria</label>
 								</li>
 						
 								<li>
-									<input type="checkbox" name="servicio[]" value="Simuladores">
+									<input type="checkbox" name="servicio[]" value="Simuladores" />
 									<label for="simuladores">Simuladores</label>
 								</li>
 
 								<li>
-									<input type="checkbox" name="servicio[]" value="Sist. de Gestion">
+									<input type="checkbox" name="servicio[]" value="Sist. de Gestion"required/>
 									<label for="gestion">Sist. de Gestion</label>
 								</li>
 	
 								<li>
-									<input type="checkbox" name="servicio[]" value="SOtros">
+									<input type="checkbox" name="servicio[]" value="SOtros" />
 									<label for="serv-otros">Otros</label>
 									<input type="text"  name="serv-otros" maxlength="15">
 								</li>
@@ -109,12 +109,12 @@
 							<div class="metodo">
 								<p>Metodo</p>
 								<li>
-									<input type="checkbox" name="metodo[]" value="SAAS" checked="">
+									<input type="checkbox" name="metodo[]" value="SAAS" checked="" />
 									<label for="saas">SAAS</label>
 								</li>
 
 								<li>
-									<input type="checkbox" name="metodo[]" value="S. Factory">
+									<input type="checkbox" name="metodo[]" value="S. Factory" />
 									<label for="sfactory">S. Factory</label>
 								</li>
 							</div>
@@ -123,7 +123,7 @@
 							<div class="motivo">
 								<p>Motivo de visita</p>
 								<li>
-									<input type="checkbox" name="motivo[]" value="Presupuesto" checked="">
+									<input type="checkbox" name="motivo[]" value="Presupuesto" checked="" >
 									<label for="presupuesto">Presupuesto</label>
 								</li>
 
@@ -138,7 +138,7 @@
 								</li>
 
 								<li>
-									<input type="checkbox" name="motivo[]" value="MOtros">
+									<input type="checkbox" name="motivo[]" value="MOtros" >
 									<label for="motiv-otros">Otros</label>
 									<input type="text" name="motivs-otros" maxlength="15">
 								</li>
