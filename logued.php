@@ -1,20 +1,22 @@
 <?php 
 	session_start();
-	
+	//se verifica que el usuari tenga una sesion activa 
 	if (isset($_SESSION["current_id"]) && $_SESSION["current_id"] == true){
 		
 
 
-	}else{
+	}//en el caso que no este se le avisa y se lo devuelve a la pantalla de loguin
+	else{
 			echo "<script  type='text/javascript'>";
 			echo "alert('No estas logueado');";
 			echo "</script>";
 			echo "<br/>" . "<a href='index.php'>volver al Login</a>";
 			exit;
 		}
-
+	//archivo con las variables de los campos para manda los registros a la DB
 	include("VariablesForm.php");
-
+	//archivo con las variables de los campos para consultar los registros a la DB
+	include("buscarregistro.php");
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,19 +25,22 @@
 	<title>Formulario de usuario ingresado</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
 	<link rel="stylesheet" href="css/styleLoged.css">
+	<!-- scritp para poner los prefijos de stilo automaticamente para los navegadores desactualizados -->
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/jquery-latest.js"></script>
 	
+	
+	
 </head>
-
 <body>
+	
 	<div class="header">
 	<h1 class="user"><a href="#">Bienvenido Usuario -(<?php echo $_SESSION['current_user']; ?>)-</a></h1>
       <ul class="main-nav">
-          <li><a href="#">Funcion?</a></li>
-          
+         
+          <!-- se utiliza para que el usuario cierre sesion -->
           <li><a href="logout.php">SALIR!!!</a></li>
-          <!-- <p><?php echo "Fecha actual ".date("d-m-Y"); ?></p> -->
+         
       </ul>
 	</div> 
 
@@ -80,7 +85,7 @@
 						<!--******SERVICOS CHKBOX******* -->	
 								<p>Tipo de servicio</p>
 								<li>
-									<input type="checkbox" name="servicio[]" value="Consultoria">
+									<input type="checkbox" name="servicio[]" value="Consultoria" checked="">
 									<label for="consultoria">Consultoria</label>
 								</li>
 						
@@ -104,7 +109,7 @@
 							<div class="metodo">
 								<p>Metodo</p>
 								<li>
-									<input type="checkbox" name="metodo[]" value="SAAS">
+									<input type="checkbox" name="metodo[]" value="SAAS" checked="">
 									<label for="saas">SAAS</label>
 								</li>
 
@@ -118,7 +123,7 @@
 							<div class="motivo">
 								<p>Motivo de visita</p>
 								<li>
-									<input type="checkbox" name="motivo[]" value="Presupuesto">
+									<input type="checkbox" name="motivo[]" value="Presupuesto" checked="">
 									<label for="presupuesto">Presupuesto</label>
 								</li>
 
@@ -149,16 +154,72 @@
 			
 		</div>	
 
-		
+		<!-- caja de observaciones -->
 		<div class="caja obs">
-			<p>Observasiones</p>
-			<textarea name="observasiones"  class="observasiones" cols="30" rows="10"></textarea>
-			<input type="submit" class="boton" value="SUBMIT">
-
+			
+			<textarea name="observaciones"  class="observasiones" cols="30" rows="10" placeholder="INGRESESE LAS OBSERVACIONES EN ESTE CAMPO"></textarea>
+			<input type="submit" class="button" value="SUBMIT" id="btn">
+			
 		</div>
 		
 	</form>
 	</div>
+
+
+	
+
+</div>
+<!-- ventana emergente que muestra los registros que mando el usuario a la DB -->
+<div class="modalBtn">
+
+	<button id="modalBtn" class="button">Registros cargados</button>
+	<h1>Mostrar los registros cargados</h1>
+</div>
+	<div id="simpleModal" class="modal">
+
+		<div class="modal-content">
+			<span class="closeBtn">&times;</span>
+			<table>
+
+					<td>ID de Usuario</td>
+					<td>Nombre</td>
+					<td>Cargo</td>
+					<td>Empresa</td>
+					<td>Email</td>
+					<td>Telefono</td>
+					<td>OBS</td>
+					<td>Tipo deServicio</td>
+					<td>Metodo</td>
+					<td>Motivo</td>
+					<td>Fecha</td>
+					
+					<!-- se utiliza para recorrer el array donde estan almacenados los datos que devolvio la query para mostrarlos en la ventana emergente -->
+					<?php 	while($row = mysqli_fetch_array($result)) { ?>
+	
+			<tr>
+				<td class= "row"><?php echo $row['user_id']; ?></td>
+				<td class= "row"><?php echo $row['empresa_nombre']; ?></td>
+				<td class= "row"><?php echo $row['emprea_cargo']; ?></td>
+				<td class= "row"><?php echo $row['empresa_empresa']; ?></td>
+				<td class= "row"><?php echo $row['empresa_email']; ?></td>
+				<td class= "row"><?php echo $row['empresa_telefono']; ?></td>
+				<td class= "row"><?php echo $row['empresa_obs']; ?></td>
+				<td class= "row"><?php echo $row['chk_servicio']; ?></td>
+				<td class= "row"><?php echo $row['chk_metodo']; ?></td>
+				<td class= "row"><?php echo $row['chk_motivo']; ?></td>
+				<td class= "row"><?php echo $row['fecha']; ?></td>
+			</tr>
+			<?php } ?>
+
+
+				</tr>
+			</table>
+		</div>
+	</div>
+<!-- script para que el usuario solo puede seleccionar un checkbox -->
 <script src="js/only-one-checkbox.js"></script>
+<!-- script que da las funciones a la ventana emergente de registros -->
+<script src="js/modal.js"></script>
+
 </body>
 </html>

@@ -1,3 +1,7 @@
+/*********************Archivo de stilos de la pagina logued.php******************************/
+
+
+
 * {
 	box-sizing: border-box;
 }
@@ -5,7 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	min-height: : 100vh;
-	font-family: sans-serif;
+	font-family: Arial,sans-serif;
 	align-content: center;
 
 }
@@ -138,25 +142,85 @@ li{
 }
 
 
-.observasiones{
-	display: flex;
-    height:170px;
-    width:70%;
-    resize: none;
 
-    
-}
-
-.boton{
-	margin:50px;
-	padding: 10px;
-	width:20vh;
+/*opciones de estilo de los botones*/
+.button{
+	background: #333;
+	color: #fff;
+	padding: 20px;
+	border: 2px solid #ccc;
+	border-radius: 9px;
+	cursor:pointer;
 	display: flex;
 	justify-content: center;
+	cursor:pointer;
 
 }
-p{
+
+/*hace que el boton se ponga de otro color cuando tiene el puntero encima */
+.button:hover{
+	background: ##FFFFFF;
+}
+
+/*configuracion visual de la ventana emergente (fondo opaco)*/
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.6); 
+}
+
+/*configuracion visual de la ventana emergente que contiene la tabla de registros*/
+.modal-content{
+	background-color: #f4f4f4;
+	margin: 30% auto;
+	padding: 20px;
+	width: 90%;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 21px 0 rgba(0,0,0,0.2);
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+
+/*se le da stilo al boton de salir de la ventana emergente para que el usuario lo note*/
+.closeBtn {
+	color:#ccc;
+	float:right;
+	font-size: 30px;
+
+}
+
+.closeBtn:hover,.closeBtn:focus{
+	color:#000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*animacion para cuando se abre la ventana emergente*/
+@keyframes modalopen{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+
+/*stilos para que la tabla de registros tenga formato ordenado */
+table {
+   width: 100%;
+   border: 1px solid #000;
+}
+th, td {
+   width: 25%;
+   text-align: left;
+   vertical-align: top;
+   border: 1px solid #000;
+   border-spacing: 0;
+}
+
+/*se acomoda el boton que abre la tabla de registros */
+.modalBtn{
 	display: flex;
-	padding: 0px 60px 0px 60px;
 	align-items: center;
 }
