@@ -224,3 +224,9 @@ th, td {
 	display: flex;
 	align-items: center;
 }
+
+.observasiones{
+	display: flex;
+    height:170px;
+    width:70%;
+    resize: none;
