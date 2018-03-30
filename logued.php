@@ -157,7 +157,7 @@
 		<!-- caja de observaciones -->
 		<div class="caja obs">
 			
-			<textarea name="observaciones"  class="observasiones" cols="30" rows="10" placeholder="INGRESESE LAS OBSERVACIONES EN ESTE CAMPO"></textarea>
+			<textarea name="observasiones"  class="observasiones" cols="30" rows="10" placeholder="INGRESESE LAS OBSERVACIONES EN ESTE CAMPO"></textarea>
 			<input type="submit" class="button" value="SUBMIT" id="btn">
 			
 		</div>
