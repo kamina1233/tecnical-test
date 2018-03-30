@@ -95,7 +95,7 @@
 								</li>
 
 								<li>
-									<input type="checkbox" name="servicio[]" value="Sist. de Gestion"required/>
+									<input type="checkbox" name="servicio[]" value="Sist. de Gestion"/>
 									<label for="gestion">Sist. de Gestion</label>
 								</li>
 	
